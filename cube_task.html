@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}, TeX: {extensions: ["mediawiki-texvc.js", "autobold.js"], unicode: {
+    fonts: "STIXGeneral, 'Arial Unicode MS'"}}
+});
+</script>
+
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer-->
+
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML" defer></script>
+
+<script src="scripts/Algorithms.js" defer></script>
+<script src="scripts/Ring.js" defer></script>
+<script src="scripts/Matrix.js" defer></script>
+<script src="scripts/Polynom.js" defer></script>
+<script src="scripts/cube_task.js" defer></script>
+</head>
+<body>
+<div>
+<i>Разделим куб тремя взаимно перпендикулярными плоскостями на два куба и шесть параллелепипедов.
+Что больше суммарный объем кубов или суммарный объем параллелепипедов?</i>
+</div>
+<br>
+<div>
+Пусть $a$ и $b$ длины сторон кубов.
+Тогда суммарный объем кубов равен $a^3+b^3$, а суммарный объем параллелепипедов равен $(a+b)^3-a^3-b^3$.<br>
+Понятно, что при $a$ стремящемся к $b$ объем кубов меньше, а при $a$ стремящемся к нулю объем больше.<br>
+Следовательно имеет смысл искать точку равновесия как решение уравнения  $a^3+b^3=(a+b)^3-a^3-b^3$ относительно $a/b$.
+Раскрыв скобки получем
+$$a^3-3a^2b-3ab^2+b^3=0$$
+Поделив на $b^3$ и выполнив замену $x:=a/b$ получим
+$$x^3-3x^2-3x+1=0$$
+Из соображений симметрии видно, что $-1$ является корнем уравнения, тогда поделив на $x+1$
+</div>
+<br>
+<p></p>
+<div>
+получим
+$$x^2-4x+1=0$$
+отсюда $x=2+\sqrt{3}$ или $x=2-\sqrt{3}$. Оба числа подходят в качестве решения задачи, так как являются взаинообратными.
+</div>
+<br>
+<div>
+В общем $n$-мерном случае задача сводится к решениею уравнения 
+$$a^n+b^n=(a+b)^n-a^n-b^n$$
+До $n=5$ включительно можно выразить решени в радикалах.
+</div>
+</body>
+</html>
