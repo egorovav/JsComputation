@@ -1,0 +1,13 @@
+table.solid {
+  border-collapse: collapse;
+}
+
+table.solid td {
+  border: 1px;
+  border-color: gray;
+  border-style: solid;
+}
+
+td {
+
+}
